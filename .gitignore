@@ -162,3 +162,4 @@ cython_debug/
 
 
 "Project 1 - LLM Retriver With Vector Database"/LLM_env/
+*.pdf
