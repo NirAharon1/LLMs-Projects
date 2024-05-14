@@ -5,3 +5,5 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 Commercial use of the Software requires explicit permission from the copyright holder.
+
+Copyright 2024 NirAharon1
