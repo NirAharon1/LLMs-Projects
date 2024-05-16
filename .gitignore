@@ -166,5 +166,6 @@ cython_debug/
 *.exe
 pip3.exe
 "Project 1 - LLM Retriver With Vector Database"/LLM_env/pip3.exe
+"Project 1 - LLM Retriver With Vector Database"/LLM_env/pyvenv.cfg
 "Project 1 - LLM Retriver With Vector Database"/LLM_env\
 "Project 1 - LLM Retriver With Vector Database"\LLM_env\
