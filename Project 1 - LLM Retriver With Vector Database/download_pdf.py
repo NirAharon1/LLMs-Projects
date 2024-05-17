@@ -5,6 +5,7 @@ from urllib.parse import urlparse, urljoin
 import os
 import time
 import aiofiles
+import json
 
 async def fetch_html(url):
     async with aiohttp.ClientSession() as session:
@@ -93,6 +94,9 @@ async def main():
     await asyncio.gather(*tasks)
     end_time = time.time()
     print(f"Total time taken: {end_time - start_time} seconds")
+
+    with open('pdf_data.json', 'w', encoding='utf-8') as json_file:
+        json.dump(pdf_data, json_file, ensure_ascii=False)
 
 if __name__ == "__main__":
     asyncio.run(main())
