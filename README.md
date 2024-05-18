@@ -3,4 +3,4 @@ Welcome to the LLMs-Projects repository, dedicated to showcasing various project
 
 
 ## License
-[MIT License with Non-Commercial Clause]("[LICENSE](https://github.com/NirAharon1/LLMs-Projects/blob/main/Project%201%20-%20LLM%20Retriver%20With%20Vector%20Database/LICENSE.md)")
+[MIT License with Non-Commercial Clause]("https://github.com/NirAharon1/LLMs-Projects/blob/main/Project%201%20-%20LLM%20Retriver%20With%20Vector%20Database/LICENSE.md")
