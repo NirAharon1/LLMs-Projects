@@ -1,0 +1,15 @@
+/* styles.css */
+
+body {
+    direction: rtl;
+    text-align: right;
+}
+
+.expander {
+    background-color: lightgray;
+}
+
+.expander > div > h2 {
+    color: red;
+    font-weight: bold;
+}

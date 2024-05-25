@@ -166,6 +166,8 @@ cython_debug/
 *.exe
 pip3.exe
 LLM_env/
-
+front_stream.py
+main.py
 launch.json
-
+Project Notebook.ipynb
+test_front_stream.py
