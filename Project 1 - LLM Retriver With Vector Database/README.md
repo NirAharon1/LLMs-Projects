@@ -18,6 +18,9 @@
 6. Run the first script - **download_pdf.py** for download all PDF files
    ```powershell
    python download_pdf.py
-7. Run the second script - **vectorizing_pdf.py** vectorize all pdf to pinecone
+7. Run the second script - **vectorizing_pdf.py** - vectorize all pdf to pinecone
    ```powershell
    python vectorizing_pdf.py
+7. Run the third script - **chat_bot_app.py** - launching the chatbot app
+   ```powershell
+   streamlit run chat_bot_app.py

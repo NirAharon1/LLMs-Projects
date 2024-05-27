@@ -36,6 +36,7 @@ model_mane ="gpt-4o"
 index_name = 'test-index-1536'
 
 
+
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 pinecone_api_key = os.getenv("PINECONE_API_KEY")
