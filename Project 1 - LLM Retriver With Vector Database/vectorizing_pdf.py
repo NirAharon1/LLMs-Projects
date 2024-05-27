@@ -77,6 +77,8 @@ with open('pdf_data.json', 'r', encoding='utf-8') as json_file:
             pdf_text_chunked_embedded = get_vector_embedding(pdf_text_chunked)
             chunk_ind_list =  [pdf_name+str(i) for i in range(len(pdf_text_chunked_embedded))]
             metadata = [{'text': paragraph} for paragraph in pdf_text_chunked]
+            for dictionary in metadata:
+                dictionary.update(pdf_data[pdf_name])
             index.upsert(vectors=zip(chunk_ind_list,pdf_text_chunked_embedded,metadata))
     except Exception as e:
         error_code = getattr(e, 'code', None)  # Get the error code if available
