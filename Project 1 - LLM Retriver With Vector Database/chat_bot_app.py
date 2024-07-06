@@ -19,7 +19,7 @@ float_init(theme=True, include_unstable_primary=False)
 
 
 if "number_of_docs" not in st.session_state:
-    st.session_state.number_of_docs = 1
+    st.session_state.number_of_docs = 3
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
@@ -64,6 +64,7 @@ qa_template = """
             Your job is to return complete and accurate answers to the manager of a consumer credit company.
             Answer the question based on the context provided below. 
             If you're unable to answer the question, simply reply with "Sorry, I don't know the answer". 
+            When a user requests code output, respond with: 'Sorry, we don't allow code output.'
             Context: {context}
             Question: {input}  
                         
