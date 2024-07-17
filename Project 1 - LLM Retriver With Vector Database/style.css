@@ -1,4 +1,6 @@
 /* styles.css */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden;}
 
 body {
     direction: rtl;
