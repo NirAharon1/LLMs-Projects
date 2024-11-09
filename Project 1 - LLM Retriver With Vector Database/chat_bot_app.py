@@ -41,8 +41,9 @@ MODEL_NAME = "gpt-4o-mini" # $0.150 / 1M input tokens
 EMBEDDINGS_MODEL_NAME="text-embedding-3-small" # US$0.02 / 1M tokens
 # EMBEDDINGS_MODEL_NAME="text-embedding-ada-002" # US$0.10 / 1M tokens
 
-INDEX_NAME = 'test-index-1536'
-MAX_TOKENS = 300
+# INDEX_NAME = 'test-index-1536'
+INDEX_NAME = 'llamaparse-1536'
+MAX_TOKENS = 2000
 
 
 st.set_page_config(page_title="bot", page_icon="🤖")
@@ -62,15 +63,13 @@ local_css("style.css") # Load custom CSS
 
 
 session_defaults = {
-    "number_of_docs":1,
+    "number_of_docs":5,
     "similarity_score_threshold":0.65,
     "chat_history":[],
     "contents":[],
     "retrived_content":[],
     "run_id":None,
     "feedback_result" :None
-
-
 }
 
 for key, value in session_defaults.items():
@@ -146,8 +145,6 @@ def initialize_combined_chain(llm, retriever):
     return create_retrieval_chain(history_chain, qa_chain)
 
 
-
-
 def get_session_history(session_id: str) -> BaseChatMessageHistory:
     if "chat_message_history" not in st.session_state:
         st.session_state.chat_message_history = ChatMessageHistory()
@@ -162,6 +159,8 @@ def display_ai_response_context(context):
         with st.expander(expander_title, expanded=False, icon=':material/picture_as_pdf:'):
             st.write(ai_response_content.page_content)
             st.write(ai_response_content.metadata['pdf_url'])
+            st.write(ai_response_content.metadata['name'])
+            st.write(f"page number: {ai_response_content.metadata['page_number']}")
 
 def display_chat_history():
     for message in st.session_state.chat_history:
@@ -215,7 +214,7 @@ def feedback(id):
 
 
 
-def main()->None:
+def main() -> None:
     llm = initialize_llm()
     retriever = initialize_retriever(st.session_state.number_of_docs, st.session_state.similarity_score_threshold)
     combined_chain = initialize_combined_chain(llm, retriever)
@@ -286,14 +285,5 @@ def main()->None:
                             feedback(run_id)
 
 
-
-                        
-
-
-
-
-
-
 if __name__ == "__main__":
     main()
-
