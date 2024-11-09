@@ -15,12 +15,19 @@
 4. Change the Name of `.env.shared` to `.env`
 5. Enter Your API Keys
     Open the `.env` file and enter your OpenAI API key and Pinecone API key in the appropriate variables.
-6. Run the first script - **download_pdf.py** for download all PDF files
+    
+6. Run the first script - **pdf downloading pipline.py** for download all PDF files
    ```powershell
-   python download_pdf.py
-7. Run the second script - **vectorizing_pdf.py** - vectorize all pdf to pinecone
+   python "pdf downloading pipline.py"
+
+7. Run the second script - **pdf parsing pipline.py** - vectorize all pdf to pinecone
    ```powershell
-   python vectorizing_pdf.py
-7. Run the third script - **chat_bot_app.py** - launching the chatbot app
+   python "pdf parsing pipline.py"
+
+8. Run the second script - **database to pinecone pipline.py** - vectorize all pdf to pinecone
+   ```powershell
+   python "database to pinecone pipline.py"
+
+9. Run the third script - **chat_bot_app.py** - launching the chatbot app
    ```powershell
    streamlit run chat_bot_app.py
